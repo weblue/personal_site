@@ -1,28 +1,68 @@
+$background-color: #fff;
+$pixel-size: 8px;
+$pixel-color-map: (
+  'a': #000000,
+  'd': #aaaaaa,
+  'b': #333333,
+  'f': #444444,
+  'c': #888888,
+  'e': #cccccc,
+  'o': transparent
+);
+
 body {
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 1.5rem;
-    /* margin: 0 */
+    background-color: $background-color;
 }
-//TODO2 add offset to animation start
-//TODO2 add random frame select on render
+
+.text {
+  text-shadow: 0 0 2px $background-color;
+}
+
 .title { 
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    @media only screen and (max-width: 480px) {
+      font-size: 2.5rem;
+    }
 }
 
 .sub-title { 
     font-weight: bold;
-    font-size: 2rem
+    font-size: 2.5rem;
+    @media only screen and (max-width: 480px) {
+      font-size: 1.6rem;
+    }
 }
 
+.pixel-box {
+  position: flex;
+  height: 100%;
+}
 
 .contact-box {
-    font-size: 2rem;
+    font-size: 1.5em;
     align-items: flex-end;
     display: flex;
     flex-direction: column;
     align-self: flex-end;
-    order: 1
+    order: 1;
+    padding-bottom: 50px;
+    @media only screen and (max-width: 480px) {
+      font-size: 1em;
+    }
+}
+
+h3 {
+  @media only screen and (max-width: 480px) {
+    margin: 5px 0 5px 0;
+  }
+}
+
+.star {
+  position: absolute;
+  z-index: -1;
 }
 
 .projects-box a:hover {
@@ -39,7 +79,9 @@ body {
     width: 100%;
     height: 97vh;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
+    z-index: 1000;
     justify-content: space-between;
 }
 
@@ -49,7 +91,7 @@ $required-properties: (id, frames, colors);
 $default-settings: (
   pixel-size: 10px, // Pixel size
   padding: 0, // Space between pixels
-  speed: .25s, // Frame speed
+  speed: 1s, // Frame speed
   offset: 1
 );
 
@@ -99,11 +141,10 @@ $default-settings: (
     @include draw-frame($frames, $colors, $pixel-size, $padding);
   }
   @else {
-    //TODO google css start at random keyframe
     animation: #{$id}-frames $frame-count * $speed * $offset steps(1) infinite;
     @keyframes #{$id}-frames {
       @for $i from 1 through $frame-count {
-        #{100% / $frame-count * ($i - 1)} {
+        #{calc(100% / $frame-count) * ($i - 1)} {
           @include draw-frame($frames, $colors, $pixel-size, $padding, $i);
         }
       }
@@ -134,75 +175,99 @@ $default-settings: (
   }
 }
 
-$pixel-size: 8px;
-
-// $pixel-color-map: (
-//   'a': #000000,
-//   'b': #333333,
-//   'f': #444444,
-//   'c': #888888,
-//   'd': #aaaaaa,
-//   'e': #cccccc,
-//   'o': transparent
-// );
-
-//TODO smooth transitions between frames
-
   $tiny-star: (
     frames: (
     "oeo""ooo",
     "eae""odo",
     "oeo""ooo"
     ),
-    colors: (
-      'a': #000000,
-      'c': #888888,
-      'e': #cccccc,
-      'd': #aaaaaa,
-      'o': transparent
-    ),
-    speed: 4s
+    colors: $pixel-color-map,
+    speed: 1.25s
   );
-  $med-star: (
+  // $med-star: (
+  //   frames: (
+  //     "ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo",
+  //     "oefeo""oefeo""oocoo""ooeoo""oocoo""oefeo",
+  //     "efafe""ofafo""ocbco""oeceo""ocbco""ofafo",
+  //     "oefeo""oefeo""oocoo""ooeoo""oocoo""oefeo",
+  //     "ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo"
+  //   ),
+  //   colors: $pixel-color-map,
+  //   speed: 1s,
+  // );
+  $slow-med-star: (
     frames: (
-      "ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo",
-      "oefeo""oefeo""oocoo""ooeoo""oocoo""oefeo",
-      "efafe""ofafo""ocbco""oeceo""ocbco""ofafo",
-      "oefeo""oefeo""oocoo""ooeoo""oocoo""oefeo",
-      "ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo"
+      "ooeoo""ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo",
+      "oefeo""oefeo""oefeo""oocoo""ooeoo""oocoo""oefeo",
+      "efafe""efafe""ofafo""ocbco""oeceo""ocbco""ofafo",
+      "oefeo""oefeo""oefeo""oocoo""ooeoo""oocoo""oefeo",
+      "ooeoo""ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo"
     ),
-    colors: (
-      'a': #000000,
-      'c': #888888,
-      'b': #333333,
-      'f': #444444,
-      'e': #cccccc,
-      'o': transparent
-    ),
-    speed: 2.75s,
-    offset: 1,
+    colors: $pixel-color-map,
+    speed: 1s,
   );
-  $little-star: (
+  // $little-star: (
+  //   frames: (
+  //     "ece""ece""odo""oeo""odo",
+  //     "cac""cac""dfd""ece""dfd",
+  //     "ece""ece""odo""oeo""odo"
+  //   ),
+  //   colors: $pixel-color-map,
+  //   speed: .75s
+  // );
+  $slow-little-star: (
     frames: (
-      "ece""odo""oeo""odo",
-      "cac""dfd""ece""dfd",
-      "ece""odo""oeo""odo"
+      "ece""ece""odo""oeo""odo",
+      "cac""cac""dfd""ece""dfd",
+      "ece""ece""odo""oeo""odo"
     ),
-    colors: (
-      'a': #000000,
-      'd': #aaaaaa,
-      'b': #333333,
-      'f': #444444,
-      'c': #888888,
-      'e': #cccccc,
+    colors: $pixel-color-map,
+    speed: 1s
+  );
+
+  $moon: (
+    frames: (
+      "oooooooooooooooooooooooooo""ooooodoooooooooooooooooooo",
+      "ooooocooooooccccoooooooooo""oooodbdooooooooooooooooooo",
+      "oooooooooooocbbbcoooooodoo""ooooodooooooccccoooooooooo",
+      "oooooooooooocbbbbcoooodbdo""oooooooooooocbbbcoooooocoo",
+      "ooooooooooooocbbbbcoooodoo""oooooooooooocbbbbcoooooooo",
+      "ooooooooooooocbbbbcooooooo""ooooooooooooocbbbbcooooooo",
+      "ooooooccooooocbbbbcooooooo""ooooooooooooocbbbbcooooooo",
+      "oooooocbcooocbbbbbcooooooo""ooooooccooooocbbbbcooooooo",
+      "oooooocbbcccbbbbbbcooooooo""oooooocbcooocbbbbbcooooooo",
+      "oooooocbbbbbbbbbbbcooooooo""oooooocbbcccbbbbbbcooooooo",
+      "oooooocbbbbbbbbbbcoooooooo""oooooocbbbbbbbbbbbcooooooo",
+      "ooboooocbbbbbbbbcooooooooo""oocooocbbbbbbbbbbcoodooooo",
+      "ooooooooccbbbbbcoooocooooo""ooooooocbbbbbbbbcoodbdoooo",
+      "oooooooooccccccooooooooooo""ooooooooccbbbbbcoooodooooo",
+      "oooooooooooooooooooooooooo""oooooooooccccccooooooooooo"
     ),
-    speed: 2s
+    colors: $pixel-color-map,
+    speed: 1.5s
+  );
+
+  $ground: (
+    frames: (
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "eeecceeeeccccceeeeeeccceeeeececceeeeeeecceeeeccccceeeeeeccceeeeececceeeeeeecceeeeccccceeeeeeccceeeeececceeeeeeecceeeeccccceeeeeeccceeeeececceeeeeeecceeeeccccceeeeeeccceeeeececceeeecceeeeccccceeeeeeccceeeeececceeeecceeeeccccceeeeeeccceeeeececceeeecceeeeccccceeeeeeccceeeeececceeee",
+      "eeeeceeeeecccceeeeeeceeeeeeeeeeceeeeeeeeceeeeecceceeeeeeceeeeeeeeeeceeeeeeeeceeeeeccceeeeeeeceeeeeeeeeceeeeeeeeeceeeeeceeceeeeeeceeeeeeeeeeceeeeeeeeceeeeecccceeeeeeceeeeeeeeeeceeeeeceeeeecccceeeeeeceeeeeeeeeeceeeeeceeeeececceeeeeeceeeeeeeeeeceeeeeceeeeecccceeeeeeceeeeeeeeeeceeee",
+      "eeeeeeeeeeeeeceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+    ),
+    colors: $pixel-color-map
   );
 
 @include pixel-art((
   tiny-star: $tiny-star,
-  little-star: $little-star,
-  med-star: $med-star
+  // little-star: $little-star,
+  slow-little-star: $slow-little-star,
+  // med-star: $med-star,
+  slow-med-star: $slow-med-star,
+  ground: $ground,
+  moon: $moon
 ), (
   pixel-size: $pixel-size
 ));
