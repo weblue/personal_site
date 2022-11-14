@@ -1,53 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> nader@localhost:~$ ▍</title>
     <link id="style" rel="stylesheet" href="css/light-styles.css">
+    <script src="core.js" type="text/javascript"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-    <script>
-        // TODO move this js out to it's own page
-        // TODO save setting in local store, refresh page after toggle, load style sheet from local
-        function toggleTheme() {
-            var theme = document.getElementById("style");
-
-            if (theme.getAttribute('href') == 'css/light-styles.css') {
-                theme.setAttribute('href', 'css/dark-styles.css');
-            } else {
-                theme.setAttribute('href', 'css/light-styles.css');
-            }
-
-            var pixelBox = document.getElementById('pixel-box')
-            var n = document.createTextNode(' ');
-            var display = pixelBox.style.display;
-
-            pixelBox.appendChild(n);
-            pixelBox.style.display = 'none';
-
-            setTimeout(function(){
-                pixelBox.style.display = display;
-                n.parentNode.removeChild(n);
-            },20);
-        }
-    </script>
 </head>
 
-<!-- TODO auto toggle dark mode if device pref dark mode -->
-
-<body>
+<body onload="init()">
     <div id="main">
         <div class="text projects-box">
             <h3 class="sub-title">Professional work</h3>
             <!-- TODO description + keyword + skills modal -->
             <!-- TODO add tooltip to show modals -->
             <div style="display:flex; align-items:center">
-                <img src="images/Hertz_Car_Rental_logo.svg" style="width: 5.4rem; height: 3.2rem;"/>
+                <img src="images/Hertz_Car_Rental_logo.svg" style="width: 5.4rem; height: 3.2rem;" />
                 <a style="margin-left: 1rem; margin-right: 1rem">-</a>
-                <img src="images/Uber_logo_2018.svg" style="width: 5rem; height: 3rem;"/>
+                <img src="images/Uber_logo_2018.svg" style="width: 5rem; height: 3rem;" />
                 <a style="margin-left: 1rem; margin-right: 1rem">-</a>
-                <img src="images/Lyft_logo.svg" style="width: 5rem; height: 3rem;"/>
+                <img src="images/Lyft_logo.svg" style="width: 5rem; height: 3rem;" />
             </div>
             <a>Bridge to Renewables</a>
             <a>US Customs and Immigration</a>
@@ -76,17 +52,17 @@
         <!-- TODO ON PLANE change these stars, locations good v -->
         <!-- TODO ON PLANE hide lower stars on mobile. greather than 66% top? -->
         <!-- TODO ON PLANE lower moon on mobile -->
-        <div class="star" id="slow-little-star" style="top: 15%; left: 40%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-little-star" style="top: 38%; left: 80%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-little-star" style="top: 75%; left: 53%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-med-star" style="top: 80%; left: 30%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-little-star" style="top: 30%; left: 45%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-little-star" style="top: 75%; left: 20%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-little-star" style="top: 80%; left: 65%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-little-star" style="top: 50%; left: 90%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-little-star" style="top: 10%; left: 70%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-little-star" style="top: 50%; left: 60%; position: absolute; z-index: -2;"></div> 
-        <div class="star" id="slow-little-star" style="top: 46%; left: 75%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 15%; left: 40%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 38%; left: 80%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 75%; left: 53%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-med-star" style="top: 80%; left: 30%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 30%; left: 45%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 75%; left: 20%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 80%; left: 65%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 50%; left: 90%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 10%; left: 70%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 50%; left: 60%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 46%; left: 75%; position: absolute; z-index: -2;"></div>
 
 
 
@@ -99,10 +75,86 @@
         <div class="star" id="moon" style="left: 50%; top: 7%; position: absolute; z-index: -1;"></div>
         <div class="star" id="ground" style="left: -3%; bottom: 0; position: absolute; width: 99%; z-index: -2;"></div>
     </div>
-    <!-- TODO change this to sun/moon icons? or conditionally change text? -->
-    <div onclick="toggleTheme()" class="switch-mode-button">
-        <p>dark mode</p>
-    </div>
+    <!-- TODO ON PLANE relocate button on mobile -->
+    <a onclick="toggleTheme()" class="switch-mode-button" href="#">
+        <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="-16 -8 70 110">
+            <path d="M 10.00,5.00
+            C 10.00,5.00 10.00,10.00 10.00,10.00
+              10.00,10.00 5.00,10.00 5.00,10.00
+              5.00,10.00 5.00,5.00 5.00,5.00
+              5.00,5.00 10.00,5.00 10.00,5.00 Z
+            M 30.00,5.00
+            C 30.00,5.00 30.00,10.00 30.00,10.00
+              30.00,10.00 25.00,10.00 25.00,10.00
+              25.00,10.00 25.00,5.00 25.00,5.00
+              25.00,5.00 30.00,5.00 30.00,5.00 Z
+            M 5.00,10.00
+            C 5.00,10.00 5.00,25.00 5.00,25.00
+              5.00,25.00 0.00,25.00 0.00,25.00
+              0.00,25.00 0.00,10.00 0.00,10.00
+              0.00,10.00 5.00,10.00 5.00,10.00 Z
+            M 35.00,10.00
+            C 35.00,10.00 35.00,25.00 35.00,25.00
+              35.00,25.00 30.00,25.00 30.00,25.00
+              30.00,25.00 30.00,10.00 30.00,10.00
+              30.00,10.00 35.00,10.00 35.00,10.00 Z
+            M 25.00,0.00
+            C 25.00,0.00 25.00,5.00 25.00,5.00
+              25.00,5.00 10.00,5.00 10.00,5.00
+              10.00,5.00 10.00,0.00 10.00,0.00
+              10.00,0.00 25.00,0.00 25.00,0.00 Z
+            M 10.00,25.00
+            C 10.00,25.00 10.00,35.00 10.00,35.00
+              10.00,35.00 5.00,35.00 5.00,35.00
+              5.00,35.00 5.00,25.00 5.00,25.00
+              5.00,25.00 10.00,25.00 10.00,25.00 Z
+            M 25.00,15.00
+            C 25.00,15.00 25.00,20.00 25.00,20.00
+              25.00,20.00 10.00,20.00 10.00,20.00
+              10.00,20.00 10.00,15.00 10.00,15.00
+              10.00,15.00 25.00,15.00 25.00,15.00 Z
+            M 20.00,20.00
+            C 20.00,20.00 20.00,35.00 20.00,35.00
+              20.00,35.00 15.00,35.00 15.00,35.00
+              15.00,35.00 15.00,20.00 15.00,20.00
+              15.00,20.00 20.00,20.00 20.00,20.00 Z
+            M 30.00,25.00
+            C 30.00,25.00 30.00,35.00 30.00,35.00
+              30.00,35.00 25.00,35.00 25.00,35.00
+              25.00,35.00 25.00,25.00 25.00,25.00
+              25.00,25.00 30.00,25.00 30.00,25.00 Z
+            M 15.00,40.00
+            C 15.00,40.00 15.00,45.00 15.00,45.00
+              15.00,45.00 10.00,45.00 10.00,45.00
+              10.00,45.00 10.00,40.00 10.00,40.00
+              10.00,40.00 15.00,40.00 15.00,40.00 Z
+            M 25.00,40.00
+            C 25.00,40.00 25.00,45.00 25.00,45.00
+              25.00,45.00 20.00,45.00 20.00,45.00
+              20.00,45.00 20.00,40.00 20.00,40.00
+              20.00,40.00 25.00,40.00 25.00,40.00 Z
+            M 15.00,45.00
+            C 15.00,45.00 15.00,50.00 15.00,50.00
+              15.00,50.00 10.00,50.00 10.00,50.00
+              10.00,50.00 10.00,45.00 10.00,45.00
+              10.00,45.00 15.00,45.00 15.00,45.00 Z
+            M 25.00,35.00
+            C 25.00,35.00 25.00,40.00 25.00,40.00
+              25.00,40.00 10.00,40.00 10.00,40.00
+              10.00,40.00 10.00,35.00 10.00,35.00
+              10.00,35.00 25.00,35.00 25.00,35.00 Z
+            M 25.00,45.00
+            C 25.00,45.00 25.00,50.00 25.00,50.00
+              25.00,50.00 20.00,50.00 20.00,50.00
+              20.00,50.00 20.00,45.00 20.00,45.00
+              20.00,45.00 25.00,45.00 25.00,45.00 Z
+            M 22.00,50.00
+            C 22.00,50.00 22.00,55.00 22.00,55.00
+              22.00,55.00 13.00,55.00 13.00,55.00
+              13.00,55.00 13.00,50.00 13.00,50.00
+              13.00,50.00 22.00,50.00 22.00,50.00 Z" />
+        </svg>
+        </div>
 </body>
 
 </html>
