@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- TODO dark mode -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +19,17 @@
                 theme.setAttribute('href', 'css/light-styles.css');
             }
 
-            var stars = document.getElementsByClassName("star");
-            Array.prototype.forEach.call(stars, function(currentValue) {
-                currentValue.classList.remove("star");
+            var pixelBox = document.getElementById('pixel-box')
+            var n = document.createTextNode(' ');
+            var display = pixelBox.style.display;
 
-                console.log("beep");
+            pixelBox.appendChild(n);
+            pixelBox.style.display = 'none';
 
-                currentValue.classList.add("star");
-            }
-            );
+            setTimeout(function(){
+                pixelBox.style.display = display;
+                n.parentNode.removeChild(n);
+            },20);
         }
     </script>
 </head>
@@ -36,7 +37,7 @@
 <!-- TODO auto toggle dark mode if device pref dark mode -->
 
 <body>
-    <div class="main">
+    <div id="main">
         <div class="text projects-box">
             <h3 class="sub-title">Professional work</h3>
             <!-- TODO description + keyword + skills modal -->
@@ -71,7 +72,7 @@
             <a href="https://linkedin.com/in/naderki">linkedin.com/in/naderki</a>
         </div>
     </div>
-    <div class="pixel-box">
+    <div id="pixel-box">
         <!-- TODO ON PLANE change these stars, locations good v -->
         <!-- TODO ON PLANE hide lower stars on mobile. greather than 66% top? -->
         <!-- TODO ON PLANE lower moon on mobile -->
@@ -86,6 +87,7 @@
         <div class="star" id="slow-little-star" style="top: 10%; left: 70%; position: absolute; z-index: -2;"></div> 
         <div class="star" id="slow-little-star" style="top: 50%; left: 60%; position: absolute; z-index: -2;"></div> 
         <div class="star" id="slow-little-star" style="top: 46%; left: 75%; position: absolute; z-index: -2;"></div> 
+
 
 
         <div class="star" id="slow-med-star" style="top: 55%; left: 45%; position: absolute; z-index: -2;"></div>
