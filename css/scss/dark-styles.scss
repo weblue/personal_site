@@ -1,0 +1,18 @@
+$background-color: #000;
+$font-color: #fff;
+$pixel-size: 8px;
+$pixel-color-map: (
+  'a': #ffffff,
+  'd': #555555,
+  'b': #cccccc,
+  'f': #bbbbbb,
+  'c': #777777,
+  'e': #333333,
+  'o': transparent
+);
+
+//THIS IS OUT OF DATE, get the stuff from styles.css
+
+//TODO change link colors
+
+@import "styles"

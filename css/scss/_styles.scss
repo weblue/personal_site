@@ -1,19 +1,31 @@
-$background-color: #fff;
-$pixel-size: 8px;
-$pixel-color-map: (
-  'a': #000000,
-  'd': #aaaaaa,
-  'b': #333333,
-  'f': #444444,
-  'c': #888888,
-  'e': #cccccc,
-  'o': transparent
-);
+.switch-mode-button {
+  background-color: $font-color;
+  height: 2em;
+  width: 5em;
+  position:absolute;
+  top: 38%;
+  right: -2.5em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.switch-mode-button p {
+  color: $background-color;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.switch-mode-button:hover {
+  right: 0
+}
 
 body {
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 1.5rem;
     background-color: $background-color;
+    color: $font-color;
 }
 
 .text {
@@ -51,6 +63,7 @@ body {
     padding-bottom: 50px;
     @media only screen and (max-width: 480px) {
       font-size: 1em;
+      // padding-bottom: 0px;
     }
 }
 
@@ -73,6 +86,9 @@ h3 {
 .projects-box {
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 480px) {
+      padding-bottom: 50px;
+    }
 }
 
 .main {
@@ -83,6 +99,9 @@ h3 {
     align-items: flex-start;
     z-index: 1000;
     justify-content: space-between;
+    @media only screen and (max-width: 480px) {
+      flex-direction: column-reverse;
+    }
 }
 
 @import "../../node_modules/compass-mixins/lib/compass/css3";

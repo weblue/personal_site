@@ -6,8 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> nader@localhost:~$ ▍</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link id="style" rel="stylesheet" href="css/light-styles.css">
+
+    <script>
+        // TODO move this js out to it's own page
+        // TODO save setting in local store, refresh page after toggle, load style sheet from local
+        function toggleTheme() {
+            var theme = document.getElementById("style");
+
+            if (theme.getAttribute('href') == 'css/light-styles.css') {
+                theme.setAttribute('href', 'css/dark-styles.css');
+            } else {
+                theme.setAttribute('href', 'css/light-styles.css');
+            }
+
+            var stars = document.getElementsByClassName("star");
+            Array.prototype.forEach.call(stars, function(currentValue) {
+                currentValue.classList.remove("star");
+
+                console.log("beep");
+
+                currentValue.classList.add("star");
+            }
+            );
+        }
+    </script>
 </head>
+
+<!-- TODO auto toggle dark mode if device pref dark mode -->
 
 <body>
     <div class="main">
@@ -49,27 +75,31 @@
         <!-- TODO ON PLANE change these stars, locations good v -->
         <!-- TODO ON PLANE hide lower stars on mobile. greather than 66% top? -->
         <!-- TODO ON PLANE lower moon on mobile -->
-        <div id="slow-little-star" style="top: 15%; left: 40%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-little-star" style="top: 38%; left: 80%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-little-star" style="top: 75%; left: 53%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-med-star" style="top: 80%; left: 30%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-little-star" style="top: 30%; left: 45%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-little-star" style="top: 75%; left: 20%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-little-star" style="top: 80%; left: 65%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-little-star" style="top: 50%; left: 90%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-little-star" style="top: 10%; left: 70%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-little-star" style="top: 50%; left: 60%; position: absolute; z-index: -2;"></div> 
-        <div id="slow-little-star" style="top: 46%; left: 75%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 15%; left: 40%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 38%; left: 80%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 75%; left: 53%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-med-star" style="top: 80%; left: 30%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 30%; left: 45%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 75%; left: 20%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 80%; left: 65%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 50%; left: 90%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 10%; left: 70%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 50%; left: 60%; position: absolute; z-index: -2;"></div> 
+        <div class="star" id="slow-little-star" style="top: 46%; left: 75%; position: absolute; z-index: -2;"></div> 
 
 
-        <div id="slow-med-star" style="top: 55%; left: 45%; position: absolute; z-index: -2;"></div>
-        <div id="slow-little-star" style="top: 40%; left: 35%; position: absolute; z-index: -2;"></div>
-        <div id="tiny-star" style="top: 55%; left: 25%; position: absolute; z-index: -2;"></div>
-        <div id="slow-little-star" style="top: 35%; left: 55%; position: absolute; z-index: -2;"></div>
-        <div id="slow-med-star" style="top: 25%; left: 65%; position: absolute; z-index: -2;"></div>
-        <div id="slow-med-star" style="top: 15%; left: 85%; position: absolute; z-index: -2;"></div>
-        <div id="moon" style="left: 50%; top: 7%; position: absolute; z-index: -1;"></div>
-        <div id="ground" style="left: -3%; bottom: 0; position: absolute; width: 99%; z-index: -2;"></div>
+        <div class="star" id="slow-med-star" style="top: 55%; left: 45%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 40%; left: 35%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="tiny-star" style="top: 55%; left: 25%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-little-star" style="top: 35%; left: 55%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-med-star" style="top: 25%; left: 65%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="slow-med-star" style="top: 15%; left: 85%; position: absolute; z-index: -2;"></div>
+        <div class="star" id="moon" style="left: 50%; top: 7%; position: absolute; z-index: -1;"></div>
+        <div class="star" id="ground" style="left: -3%; bottom: 0; position: absolute; width: 99%; z-index: -2;"></div>
+    </div>
+    <!-- TODO change this to sun/moon icons? or conditionally change text? -->
+    <div onclick="toggleTheme()" class="switch-mode-button">
+        <p>dark mode</p>
     </div>
 </body>
 

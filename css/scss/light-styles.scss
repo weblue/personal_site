@@ -1,0 +1,15 @@
+$background-color: #fff;
+$font-color: #000;
+$pixel-size: 8px;
+$pixel-color-map: (
+  'a': #000000,
+  'd': #aaaaaa,
+  'b': #333333,
+  'f': #444444,
+  'c': #888888,
+  'e': #cccccc,
+  'o': transparent
+);
+
+
+@import "styles";
