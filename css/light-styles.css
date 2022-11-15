@@ -55,8 +55,8 @@
 }
 
 .mobile-star-4 {
-  top: 15%;
-  left: 40%;
+  top: 50%;
+  left: 60%;
   z-index: -2;
 }
 @media only screen and (max-width: 480px) {
@@ -247,7 +247,7 @@ body {
   position: absolute;
 }
 #tiny-star::after {
-  animation: tiny-star-frames 2.5s steps(1) infinite;
+  animation: tiny-star-frames 3.32s steps(1) infinite;
 }
 @keyframes tiny-star-frames {
   0% {
@@ -320,7 +320,7 @@ body {
   position: absolute;
 }
 #med-star::after {
-  animation: med-star-frames 7s steps(1) infinite;
+  animation: med-star-frames 5.74s steps(1) infinite;
 }
 @keyframes med-star-frames {
   0% {

@@ -48,8 +48,8 @@
 }
 
 .mobile-star-4 {
-  top: 15%; 
-  left: 40%; 
+  top: 50%;
+  left: 60%;
   z-index: -2;
   @media only screen and (max-width: 480px) {
     left: 10%;
@@ -177,7 +177,6 @@ body {
     padding-bottom: 50px;
     @media only screen and (max-width: 480px) {
       font-size: 1em;
-      // padding-bottom: 0px;
       margin-top: 1%;
     }
 }
@@ -216,9 +215,9 @@ h3 {
 
 $required-properties: (id, frames, colors);
 $default-settings: (
-  pixel-size: 10px, // Pixel size
-  padding: 0, // Space between pixels
-  speed: 1s, // Frame speed
+  pixel-size: 10px,
+  padding: 0,
+  speed: 1s,
   offset: 1
 );
 
@@ -302,7 +301,6 @@ $default-settings: (
   }
 }
 
-// TODO ON PLANE mess with times, maybe add frames to tiny star
   $tiny-star: (
     frames: (
     "oeo""ooo",
@@ -310,7 +308,7 @@ $default-settings: (
     "oeo""ooo"
     ),
     colors: $pixel-color-map,
-    speed: 1.25s
+    speed: 1.66s
   );
   $med-star: (
     frames: (
@@ -321,7 +319,7 @@ $default-settings: (
       "ooeoo""ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo"
     ),
     colors: $pixel-color-map,
-    speed: 1s,
+    speed: .82s,
   );
   $little-star: (
     frames: (
