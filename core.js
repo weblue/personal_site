@@ -1,7 +1,7 @@
 function init() {
     var themeSetting = localStorage.getItem('theme');
     var theme = document.getElementById("style");
-    if (themeSetting == 'dark' || window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    if (themeSetting == 'dark' /*|| window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches*/)
         theme.setAttribute('href', 'css/dark-styles.css');
     else if (themeSetting == 'light')
         theme.setAttribute('href', 'css/light-styles.css');

@@ -43,6 +43,11 @@ body {
     }
 }
 
+.details {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 #pixel-box {
   position: flex;
   height: 100%;
@@ -213,7 +218,7 @@ $default-settings: (
   //   colors: $pixel-color-map,
   //   speed: 1s,
   // );
-  $slow-med-star: (
+  $med-star: (
     frames: (
       "ooeoo""ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo",
       "oefeo""oefeo""oefeo""oocoo""ooeoo""oocoo""oefeo",
@@ -233,7 +238,7 @@ $default-settings: (
   //   colors: $pixel-color-map,
   //   speed: .75s
   // );
-  $slow-little-star: (
+  $little-star: (
     frames: (
       "ece""ece""odo""oeo""odo",
       "cac""cac""dfd""ece""dfd",
@@ -280,10 +285,8 @@ $default-settings: (
 
 @include pixel-art((
   tiny-star: $tiny-star,
-  // little-star: $little-star,
-  slow-little-star: $slow-little-star,
-  // med-star: $med-star,
-  slow-med-star: $slow-med-star,
+  little-star: $little-star,
+  med-star: $med-star,
   ground: $ground,
   moon: $moon
 ), (

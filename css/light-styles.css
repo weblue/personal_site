@@ -47,6 +47,11 @@ body {
   }
 }
 
+.details {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 #pixel-box {
   position: flex;
   height: 100%;
@@ -141,12 +146,12 @@ body {
   }
 }
 
-#slow-little-star {
+#little-star {
   width: 24px;
   height: 24px;
   position: relative;
 }
-#slow-little-star::after {
+#little-star::after {
   content: "";
   width: 8px;
   height: 8px;
@@ -154,10 +159,10 @@ body {
   left: -8px;
   position: absolute;
 }
-#slow-little-star::after {
-  animation: slow-little-star-frames 5s steps(1) infinite;
+#little-star::after {
+  animation: little-star-frames 5s steps(1) infinite;
 }
-@keyframes slow-little-star-frames {
+@keyframes little-star-frames {
   0% {
     -webkit-box-shadow: 8px 0px #cccccc, 16px 0px #888888, 24px 0px #cccccc, 8px 8px #888888, 16px 8px #000000, 24px 8px #888888, 8px 16px #cccccc, 16px 16px #888888, 24px 16px #cccccc;
     -moz-box-shadow: 8px 0px #cccccc, 16px 0px #888888, 24px 0px #cccccc, 8px 8px #888888, 16px 8px #000000, 24px 8px #888888, 8px 16px #cccccc, 16px 16px #888888, 24px 16px #cccccc;
@@ -185,12 +190,12 @@ body {
   }
 }
 
-#slow-med-star {
+#med-star {
   width: 40px;
   height: 40px;
   position: relative;
 }
-#slow-med-star::after {
+#med-star::after {
   content: "";
   width: 8px;
   height: 8px;
@@ -198,10 +203,10 @@ body {
   left: -8px;
   position: absolute;
 }
-#slow-med-star::after {
-  animation: slow-med-star-frames 7s steps(1) infinite;
+#med-star::after {
+  animation: med-star-frames 7s steps(1) infinite;
 }
-@keyframes slow-med-star-frames {
+@keyframes med-star-frames {
   0% {
     -webkit-box-shadow: 24px 0px #cccccc, 16px 8px #cccccc, 24px 8px #444444, 32px 8px #cccccc, 8px 16px #cccccc, 16px 16px #444444, 24px 16px #000000, 32px 16px #444444, 40px 16px #cccccc, 16px 24px #cccccc, 24px 24px #444444, 32px 24px #cccccc, 24px 32px #cccccc;
     -moz-box-shadow: 24px 0px #cccccc, 16px 8px #cccccc, 24px 8px #444444, 32px 8px #cccccc, 8px 16px #cccccc, 16px 16px #444444, 24px 16px #000000, 32px 16px #444444, 40px 16px #cccccc, 16px 24px #cccccc, 24px 24px #444444, 32px 24px #cccccc, 24px 32px #cccccc;
