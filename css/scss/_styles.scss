@@ -5,11 +5,123 @@
   position:absolute;
   right: 0;
   top: 38%;
+
+  @media only screen and (max-width: 480px) {
+    left: 0;
+    top: 33%;
+  }
+}
+
+.mobile-hide {
+  @media only screen and (max-width: 480px) {
+    visibility: hidden;
+  }
+}
+
+.mobile-star-1 {
+  z-index: -2;
+  top: 25%;
+  left: 65%; 
+  @media only screen and (max-width: 480px) {
+    top: 70%;
+    left: 75%;
+  }
+}
+
+.mobile-star-2 {
+  z-index: -2;
+  top: 35%;
+  left: 55%; 
+  @media only screen and (max-width: 480px) {
+    left: 15%;
+  }
+}
+
+.mobile-star-3 {
+  z-index: -2;
+  top: 55%;
+  left: 25%;
+  @media only screen and (max-width: 480px) {
+    top: 8%;
+    left: 5%;
+  }
+}
+
+.mobile-star-4 {
+  top: 15%; 
+  left: 40%; 
+  z-index: -2;
+  @media only screen and (max-width: 480px) {
+    left: 10%;
+    top: 20%;
+  }
+}
+
+.mobile-star-5 {
+  top: 75%; 
+  left: 53%; 
+  z-index: -2;
+  @media only screen and (max-width: 480px) {
+    left: 90%;
+    top: 85%;
+  }
 }
 
 .switch-mode-button:hover {
-  transform: scale(1.2);
-  right: .2%;
+  filter: invert(100%);
+}
+
+.link {
+  color: $link-color;
+}
+
+.moon {
+  z-index: -1;
+  left: 50%; 
+  top: 7%; 
+  
+  @media only screen and (max-width: 480px) {
+    top: 30%;
+  }
+}
+
+.modal-window {
+  position: fixed;
+  background-color: $modal-background-fade;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+  color: $background-color;
+  & > div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: $font-color;
+  }
+
+}
+.modal-close {
+  color: map-get($pixel-color-map, "c");
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  padding-right:10px;
+  width: 70px;
+  text-decoration: none;
+  &:hover {
+    color: $background-color;
+  }
 }
 
 #dark-icon {
@@ -46,6 +158,7 @@ body {
 .details {
     font-size: 1rem;
     font-weight: bold;
+    margin-left: 5px;
 }
 
 #pixel-box {
@@ -65,6 +178,7 @@ body {
     @media only screen and (max-width: 480px) {
       font-size: 1em;
       // padding-bottom: 0px;
+      margin-top: 1%;
     }
 }
 
@@ -72,16 +186,6 @@ h3 {
   @media only screen and (max-width: 480px) {
     margin: 5px 0 5px 0;
   }
-}
-
-.star {
-  position: absolute;
-  z-index: -1;
-}
-
-.projects-box a:hover {
-    /* maybe make it glow */
-    /* font-size: 2.2rem; */
 }
 
 .projects-box {
@@ -98,7 +202,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    z-index: 1000;
+    z-index: 998;
     justify-content: space-between;
     flex-wrap: wrap;
     justify-self: end;
@@ -198,6 +302,7 @@ $default-settings: (
   }
 }
 
+// TODO ON PLANE mess with times, maybe add frames to tiny star
   $tiny-star: (
     frames: (
     "oeo""ooo",
@@ -207,17 +312,6 @@ $default-settings: (
     colors: $pixel-color-map,
     speed: 1.25s
   );
-  // $med-star: (
-  //   frames: (
-  //     "ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo",
-  //     "oefeo""oefeo""oocoo""ooeoo""oocoo""oefeo",
-  //     "efafe""ofafo""ocbco""oeceo""ocbco""ofafo",
-  //     "oefeo""oefeo""oocoo""ooeoo""oocoo""oefeo",
-  //     "ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo"
-  //   ),
-  //   colors: $pixel-color-map,
-  //   speed: 1s,
-  // );
   $med-star: (
     frames: (
       "ooeoo""ooeoo""ooooo""ooooo""ooooo""ooooo""ooooo",
@@ -229,15 +323,6 @@ $default-settings: (
     colors: $pixel-color-map,
     speed: 1s,
   );
-  // $little-star: (
-  //   frames: (
-  //     "ece""ece""odo""oeo""odo",
-  //     "cac""cac""dfd""ece""dfd",
-  //     "ece""ece""odo""oeo""odo"
-  //   ),
-  //   colors: $pixel-color-map,
-  //   speed: .75s
-  // );
   $little-star: (
     frames: (
       "ece""ece""odo""oeo""odo",

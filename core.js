@@ -22,6 +22,15 @@ function toggleTheme() {
     refresh();
 }
 
+function showModal(project) {
+    document.getElementById("open-modal").style.visibility = "visible";
+    document.getElementById("open-modal").style.pointerEvents = "auto";
+}
+
+function closeModal() {
+    document.getElementById("open-modal").style.visibility = "hidden";
+}
+
 function refresh() {
     var pixelBox = document.getElementById('pixel-box')
     var n = document.createTextNode(' ');

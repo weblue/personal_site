@@ -10,7 +10,7 @@ $pixel-color-map: (
   'e': #333333,
   'o': transparent
 );
-
-//TODO ON PLANE change link colors
+$link-color: rgb(0, 145, 255);
+$modal-background-fade: rgba(255, 255, 255, .2);
 
 @import "styles"

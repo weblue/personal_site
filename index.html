@@ -18,142 +18,78 @@
             <h3 class="sub-title">Professional work</h3>
             <!-- TODO description + keyword + skills modal and small "details" button next to projects-->
             <div style="display:flex; align-items:center">
-                <img src="images/Hertz_Car_Rental_logo.svg" style="width: 5.4rem; height: 3.2rem;" />
+                <!-- <img src="images/Hertz_Car_Rental_logo.svg" style="width: 5.4rem; height: 3.2rem;" /> -->
+                Hertz
                 <a style="margin-left: 1rem; margin-right: 1rem">-</a>
-                <img src="images/Uber_logo_2018.svg" style="width: 5rem; height: 3rem;" />
+                <!-- <img src="images/Uber_logo_2018.svg" style="width: 5rem; height: 3rem;" /> -->
+                Uber
                 <a style="margin-left: 1rem; margin-right: 1rem">-</a>
-                <img src="images/Lyft_logo.svg" style="width: 5rem; height: 3rem;" />
+                Lyft
+                <!-- <img src="images/Lyft_logo.svg" style="width: 5rem; height: 3rem;" /> -->
+                <a href="#" class="details link" style="align-self: flex-end" onclick="showModal('hertz')">details</a>
             </div>
-            <div><a>Bridge to Renewables </a><a href="#" class="details">details</a></div>
+            <div><a>Bridge to Renewables</a></div>
             <a>US Customs and Immigration</a>
             <a>US Census Bureau</a>
             <a>CA Div. of Workers Comp</a>
 
             <h3 class="sub-title">Private work</h3>
-            <a href="https://russki.news">russki.news</a>
+            <a class="link" href="https://russki.news">russki.news</a>
             <a>eft wanna_b</a>
             <a>vote-more</a>
-            <a href="https://cephalonwannab.com">cephalon wanna_b</a>
+            <a class="link" href="https://cephalonwannab.com">cephalon wanna_b</a>
             <a>the-plugs</a>
         </div>
         <div class="text contact-box">
             <a class="title">Nader Kirrish</a>
-            <!-- TODO LATER how to present specializations or AWS certs -->
+            <!-- LATER how to present specializations or AWS certs -->
             <a class="sub-title">Hand-crafted code;</a>
             <a class="sub-title">Experienced consulting</a>
             <a class="">+1 571 242 4633</a>
-            <a href="mailto:hello@nader.contact">hello@nader.contact</a>
-            <a href="https://github.com/weblue">github.com/weblue</a>
-            <a href="https://linkedin.com/in/naderki">linkedin.com/in/naderki</a>
+            <a class="link" href="mailto:hello@nader.contact">hello@nader.contact</a>
+            <a class="link" href="https://github.com/weblue">github.com/weblue</a>
+            <a class="link" href="https://linkedin.com/in/naderki">linkedin.com/in/naderki</a>
         </div>
     </div>
     <div id="pixel-box">
         <!-- TODO ON PLANE change these stars, locations good v -->
-        <!-- TODO ON PLANE hide lower stars on mobile. greather than 66% top? -->
-        <!-- TODO ON PLANE lower moon on mobile -->
-        <div class="star" id="little-star" style="top: 15%; left: 40%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 38%; left: 80%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 75%; left: 53%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="med-star" style="top: 80%; left: 30%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 30%; left: 45%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 75%; left: 20%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 80%; left: 65%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 50%; left: 90%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 10%; left: 70%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 50%; left: 60%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 46%; left: 75%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-star-5" id="little-star" style="position: absolute;"></div>
 
+        <div class="mobile-hide" id="little-star" style="top: 38%; left: 80%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-hide" id="med-star" style="top: 80%; left: 30%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-hide" id="little-star" style="top: 75%; left: 20%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-hide" id="little-star" style="top: 30%; left: 45%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-hide" id="little-star" style="top: 50%; left: 90%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-hide" id="little-star" style="top: 10%; left: 70%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-hide" id="little-star" style="top: 50%; left: 60%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-hide" id="little-star" style="top: 46%; left: 75%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-hide" id="med-star" style="top: 55%; left: 45%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-hide" id="med-star" style="top: 15%; left: 85%; position: absolute; z-index: -2;"></div>
 
+        <div class="" id="little-star" style="top: 40%; left: 35%; position: absolute; z-index: -2;"></div>
+        <div class="" id="little-star" style="top: 80%; left: 65%; position: absolute; z-index: -2;"></div>
+        <div class="mobile-star-4" id="little-star" style="position: absolute;"></div>
+        <div class="mobile-star-3" id="tiny-star" style="position: absolute;"></div>
+        <div class="mobile-star-2" id="little-star" style="position: absolute;"></div>
+        <div class="mobile-star-1" id="med-star" style="position: absolute;"></div>
 
-        <div class="star" id="med-star" style="top: 55%; left: 45%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 40%; left: 35%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="tiny-star" style="top: 55%; left: 25%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="little-star" style="top: 35%; left: 55%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="med-star" style="top: 25%; left: 65%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="med-star" style="top: 15%; left: 85%; position: absolute; z-index: -2;"></div>
-        <div class="star" id="moon" style="left: 50%; top: 7%; position: absolute; z-index: -1;"></div>
-        <div class="star" id="ground" style="left: -3%; bottom: 0; position: absolute; width: 99%; z-index: -2;"></div>
+        <div class="moon" id="moon" style="position: absolute;"></div>
+        <div class="" id="ground" style="left: -3%; bottom: 0; position: absolute; width: 99%; z-index: -2;"></div>
     </div>
-    <!-- TODO ON PLANE relocate button on mobile -->
     <a onclick="toggleTheme()" class="switch-mode-button" href="#">
         <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="-16 -8 70 110">
-            <path d="M 10.00,5.00
-            C 10.00,5.00 10.00,10.00 10.00,10.00
-              10.00,10.00 5.00,10.00 5.00,10.00
-              5.00,10.00 5.00,5.00 5.00,5.00
-              5.00,5.00 10.00,5.00 10.00,5.00 Z
-            M 30.00,5.00
-            C 30.00,5.00 30.00,10.00 30.00,10.00
-              30.00,10.00 25.00,10.00 25.00,10.00
-              25.00,10.00 25.00,5.00 25.00,5.00
-              25.00,5.00 30.00,5.00 30.00,5.00 Z
-            M 5.00,10.00
-            C 5.00,10.00 5.00,25.00 5.00,25.00
-              5.00,25.00 0.00,25.00 0.00,25.00
-              0.00,25.00 0.00,10.00 0.00,10.00
-              0.00,10.00 5.00,10.00 5.00,10.00 Z
-            M 35.00,10.00
-            C 35.00,10.00 35.00,25.00 35.00,25.00
-              35.00,25.00 30.00,25.00 30.00,25.00
-              30.00,25.00 30.00,10.00 30.00,10.00
-              30.00,10.00 35.00,10.00 35.00,10.00 Z
-            M 25.00,0.00
-            C 25.00,0.00 25.00,5.00 25.00,5.00
-              25.00,5.00 10.00,5.00 10.00,5.00
-              10.00,5.00 10.00,0.00 10.00,0.00
-              10.00,0.00 25.00,0.00 25.00,0.00 Z
-            M 10.00,25.00
-            C 10.00,25.00 10.00,35.00 10.00,35.00
-              10.00,35.00 5.00,35.00 5.00,35.00
-              5.00,35.00 5.00,25.00 5.00,25.00
-              5.00,25.00 10.00,25.00 10.00,25.00 Z
-            M 25.00,15.00
-            C 25.00,15.00 25.00,20.00 25.00,20.00
-              25.00,20.00 10.00,20.00 10.00,20.00
-              10.00,20.00 10.00,15.00 10.00,15.00
-              10.00,15.00 25.00,15.00 25.00,15.00 Z
-            M 20.00,20.00
-            C 20.00,20.00 20.00,35.00 20.00,35.00
-              20.00,35.00 15.00,35.00 15.00,35.00
-              15.00,35.00 15.00,20.00 15.00,20.00
-              15.00,20.00 20.00,20.00 20.00,20.00 Z
-            M 30.00,25.00
-            C 30.00,25.00 30.00,35.00 30.00,35.00
-              30.00,35.00 25.00,35.00 25.00,35.00
-              25.00,35.00 25.00,25.00 25.00,25.00
-              25.00,25.00 30.00,25.00 30.00,25.00 Z
-            M 15.00,40.00
-            C 15.00,40.00 15.00,45.00 15.00,45.00
-              15.00,45.00 10.00,45.00 10.00,45.00
-              10.00,45.00 10.00,40.00 10.00,40.00
-              10.00,40.00 15.00,40.00 15.00,40.00 Z
-            M 25.00,40.00
-            C 25.00,40.00 25.00,45.00 25.00,45.00
-              25.00,45.00 20.00,45.00 20.00,45.00
-              20.00,45.00 20.00,40.00 20.00,40.00
-              20.00,40.00 25.00,40.00 25.00,40.00 Z
-            M 15.00,45.00
-            C 15.00,45.00 15.00,50.00 15.00,50.00
-              15.00,50.00 10.00,50.00 10.00,50.00
-              10.00,50.00 10.00,45.00 10.00,45.00
-              10.00,45.00 15.00,45.00 15.00,45.00 Z
-            M 25.00,35.00
-            C 25.00,35.00 25.00,40.00 25.00,40.00
-              25.00,40.00 10.00,40.00 10.00,40.00
-              10.00,40.00 10.00,35.00 10.00,35.00
-              10.00,35.00 25.00,35.00 25.00,35.00 Z
-            M 25.00,45.00
-            C 25.00,45.00 25.00,50.00 25.00,50.00
-              25.00,50.00 20.00,50.00 20.00,50.00
-              20.00,50.00 20.00,45.00 20.00,45.00
-              20.00,45.00 25.00,45.00 25.00,45.00 Z
-            M 22.00,50.00
-            C 22.00,50.00 22.00,55.00 22.00,55.00
-              22.00,55.00 13.00,55.00 13.00,55.00
-              13.00,55.00 13.00,50.00 13.00,50.00
-              13.00,50.00 22.00,50.00 22.00,50.00 Z" />
+            <path
+                d="M 10.00,5.00 C 10.00,5.00 10.00,10.00 10.00,10.00  10.00,10.00 5.00,10.00 5.00,10.00  5.00,10.00 5.00,5.00 5.00,5.00  5.00,5.00 10.00,5.00 10.00,5.00 ZM 30.00,5.00C 30.00,5.00 30.00,10.00 30.00,10.00  30.00,10.00 25.00,10.00 25.00,10.00  25.00,10.00 25.00,5.00 25.00,5.00  25.00,5.00 30.00,5.00 30.00,5.00 ZM 5.00,10.00C 5.00,10.00 5.00,25.00 5.00,25.00  5.00,25.00 0.00,25.00 0.00,25.00  0.00,25.00 0.00,10.00 0.00,10.00  0.00,10.00 5.00,10.00 5.00,10.00 ZM 35.00,10.00C 35.00,10.00 35.00,25.00 35.00,25.00  35.00,25.00 30.00,25.00 30.00,25.00  30.00,25.00 30.00,10.00 30.00,10.00  30.00,10.00 35.00,10.00 35.00,10.00 ZM 25.00,0.00C 25.00,0.00 25.00,5.00 25.00,5.00  25.00,5.00 10.00,5.00 10.00,5.00  10.00,5.00 10.00,0.00 10.00,0.00  10.00,0.00 25.00,0.00 25.00,0.00 ZM 10.00,25.00C 10.00,25.00 10.00,35.00 10.00,35.00  10.00,35.00 5.00,35.00 5.00,35.00  5.00,35.00 5.00,25.00 5.00,25.00  5.00,25.00 10.00,25.00 10.00,25.00 ZM 25.00,15.00C 25.00,15.00 25.00,20.00 25.00,20.00  25.00,20.00 10.00,20.00 10.00,20.00  10.00,20.00 10.00,15.00 10.00,15.00  10.00,15.00 25.00,15.00 25.00,15.00 ZM 20.00,20.00C 20.00,20.00 20.00,35.00 20.00,35.00  20.00,35.00 15.00,35.00 15.00,35.00  15.00,35.00 15.00,20.00 15.00,20.00  15.00,20.00 20.00,20.00 20.00,20.00 ZM 30.00,25.00C 30.00,25.00 30.00,35.00 30.00,35.00  30.00,35.00 25.00,35.00 25.00,35.00  25.00,35.00 25.00,25.00 25.00,25.00  25.00,25.00 30.00,25.00 30.00,25.00 ZM 15.00,40.00C 15.00,40.00 15.00,45.00 15.00,45.00  15.00,45.00 10.00,45.00 10.00,45.00  10.00,45.00 10.00,40.00 10.00,40.00  10.00,40.00 15.00,40.00 15.00,40.00 ZM 25.00,40.00C 25.00,40.00 25.00,45.00 25.00,45.00  25.00,45.00 20.00,45.00 20.00,45.00  20.00,45.00 20.00,40.00 20.00,40.00  20.00,40.00 25.00,40.00 25.00,40.00 ZM 15.00,45.00C 15.00,45.00 15.00,50.00 15.00,50.00  15.00,50.00 10.00,50.00 10.00,50.00  10.00,50.00 10.00,45.00 10.00,45.00  10.00,45.00 15.00,45.00 15.00,45.00 ZM 25.00,35.00C 25.00,35.00 25.00,40.00 25.00,40.00  25.00,40.00 10.00,40.00 10.00,40.00  10.00,40.00 10.00,35.00 10.00,35.00  10.00,35.00 25.00,35.00 25.00,35.00 ZM 25.00,45.00C 25.00,45.00 25.00,50.00 25.00,50.00  25.00,50.00 20.00,50.00 20.00,50.00  20.00,50.00 20.00,45.00 20.00,45.00  20.00,45.00 25.00,45.00 25.00,45.00 ZM 22.00,50.00C 22.00,50.00 22.00,55.00 22.00,55.00  22.00,55.00 13.00,55.00 13.00,55.00  13.00,55.00 13.00,50.00 13.00,50.00  13.00,50.00 22.00,50.00 22.00,50.00 Z" />
         </svg>
+    </a>
+    <!-- TODO ON PLANE fix modal on mobile -->
+    <div id="open-modal" class="modal-window">
+        <div>
+          <a onclick="closeModal()" href="#" title="Close" class="modal-close">Close</a>
+          <h1>Voilà!</h1>
+          <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
         </div>
+    </div>
 </body>
 
 </html>

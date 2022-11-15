@@ -6,10 +6,134 @@
   right: 0;
   top: 38%;
 }
+@media only screen and (max-width: 480px) {
+  .switch-mode-button {
+    left: 0;
+    top: 33%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mobile-hide {
+    visibility: hidden;
+  }
+}
+
+.mobile-star-1 {
+  z-index: -2;
+  top: 25%;
+  left: 65%;
+}
+@media only screen and (max-width: 480px) {
+  .mobile-star-1 {
+    top: 70%;
+    left: 75%;
+  }
+}
+
+.mobile-star-2 {
+  z-index: -2;
+  top: 35%;
+  left: 55%;
+}
+@media only screen and (max-width: 480px) {
+  .mobile-star-2 {
+    left: 15%;
+  }
+}
+
+.mobile-star-3 {
+  z-index: -2;
+  top: 55%;
+  left: 25%;
+}
+@media only screen and (max-width: 480px) {
+  .mobile-star-3 {
+    top: 8%;
+    left: 5%;
+  }
+}
+
+.mobile-star-4 {
+  top: 15%;
+  left: 40%;
+  z-index: -2;
+}
+@media only screen and (max-width: 480px) {
+  .mobile-star-4 {
+    left: 10%;
+    top: 20%;
+  }
+}
+
+.mobile-star-5 {
+  top: 75%;
+  left: 53%;
+  z-index: -2;
+}
+@media only screen and (max-width: 480px) {
+  .mobile-star-5 {
+    left: 90%;
+    top: 85%;
+  }
+}
 
 .switch-mode-button:hover {
-  transform: scale(1.2);
-  right: 0.2%;
+  filter: invert(100%);
+}
+
+.link {
+  color: rgb(0, 0, 255);
+}
+
+.moon {
+  z-index: -1;
+  left: 50%;
+  top: 7%;
+}
+@media only screen and (max-width: 480px) {
+  .moon {
+    top: 30%;
+  }
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+  color: #fff;
+}
+.modal-window > div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: #000;
+}
+
+.modal-close {
+  color: #888888;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  padding-right: 10px;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: #fff;
 }
 
 #dark-icon {
@@ -50,6 +174,7 @@ body {
 .details {
   font-size: 1rem;
   font-weight: bold;
+  margin-left: 5px;
 }
 
 #pixel-box {
@@ -70,6 +195,7 @@ body {
 @media only screen and (max-width: 480px) {
   .contact-box {
     font-size: 1em;
+    margin-top: 1%;
   }
 }
 
@@ -77,16 +203,6 @@ body {
   h3 {
     margin: 5px 0 5px 0;
   }
-}
-
-.star {
-  position: absolute;
-  z-index: -1;
-}
-
-.projects-box a:hover {
-  /* maybe make it glow */
-  /* font-size: 2.2rem; */
 }
 
 .projects-box {
@@ -105,7 +221,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  z-index: 1000;
+  z-index: 998;
   justify-content: space-between;
   flex-wrap: wrap;
   justify-self: end;
