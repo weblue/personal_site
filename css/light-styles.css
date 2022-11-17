@@ -82,7 +82,11 @@
   filter: invert(100%);
 }
 
-.link {
+a:link {
+  color: rgb(0, 0, 255);
+}
+
+a:visited {
   color: rgb(0, 0, 255);
 }
 
@@ -105,14 +109,14 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-  visibility: visible;
+  visibility: hidden;
   pointer-events: none;
   transition: all 0.3s;
   color: #fff;
 }
 .modal-window > div {
-  border: 2px solid #fff;
-  outline: 6px solid #000;
+  border: 3px solid #fff;
+  outline: 8px solid #000;
   width: 40%;
   position: absolute;
   display: flex;
@@ -125,7 +129,7 @@
 }
 
 .modal-close {
-  color: #888888;
+  color: #888888 !important;
   line-height: 50px;
   font-size: 80%;
   position: absolute;
@@ -137,7 +141,7 @@
   text-decoration: none;
 }
 .modal-close:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 #dark-icon {

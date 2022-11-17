@@ -71,7 +71,10 @@
   filter: invert(100%);
 }
 
-.link {
+a:link {
+  color: $link-color;
+}
+a:visited {
   color: $link-color;
 }
 
@@ -93,13 +96,13 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-  visibility: visible;
+  visibility: hidden;
   pointer-events: none;
   transition: all 0.3s;
   color: $background-color;
   & > div {
-    border: 2px solid $background-color;
-    outline: 6px solid $font-color;
+    border: 3px solid $background-color;
+    outline: 8px solid $font-color;
     width: 40%;
     position: absolute;
     display: flex;
@@ -109,13 +112,19 @@
     transform: translate(-50%, -50%);
     padding: 2em;
     background: $font-color;
-    // TODO change flex on mobile
-    // TODO change box size on mobile
+    // TODO MOBILE change flex
+    // TODO MOBILE change box size on mobile
+    // & > div {
+
+    // }
+    // & > ul {
+
+    // }
   }
 
 }
 .modal-close {
-  color: map-get($pixel-color-map, "c");
+  color: map-get($pixel-color-map, "c") !important;
   line-height: 50px;
   font-size: 80%;
   position: absolute;
@@ -126,7 +135,7 @@
   width: 70px;
   text-decoration: none;
   &:hover {
-    color: $background-color;
+    color: $background-color !important;
   }
 }
 
@@ -359,6 +368,7 @@ $default-settings: (
     speed: 1.5s
   );
 
+  // TODO LATER fix ground art
   $ground: (
     frames: (
       "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
