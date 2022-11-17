@@ -93,18 +93,24 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-  visibility: hidden;
+  visibility: visible;
   pointer-events: none;
   transition: all 0.3s;
   color: $background-color;
   & > div {
-    width: 400px;
+    border: 2px solid $background-color;
+    outline: 6px solid $font-color;
+    width: 40%;
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 2em;
     background: $font-color;
+    // TODO change flex on mobile
+    // TODO change box size on mobile
   }
 
 }

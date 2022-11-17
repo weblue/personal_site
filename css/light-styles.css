@@ -105,14 +105,18 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-  visibility: hidden;
+  visibility: visible;
   pointer-events: none;
   transition: all 0.3s;
   color: #fff;
 }
 .modal-window > div {
-  width: 400px;
+  border: 2px solid #fff;
+  outline: 6px solid #000;
+  width: 40%;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
