@@ -110,14 +110,18 @@ function refresh() {
     }, 20);
 }
 
-
-//TODO NOW update content
 //TODO how to present responsibilities description
+//TODO PRIORITY update blog links
 var projects = {
     "hertz": {
         "title": "Hertz - Uber - Lyft",
-        "description": "this is where I talk to the bean",
+        "description": "I as a consultant for Hertz to help integrate Hertz into Uber and Lyft platforms as a partner. This simple task quickly grew in complexity as the API developed for this began receiving 360k requests per hour, at peak. As we reworked this application, I lead the efforts to monitor and measure the throughput, and created, tested, and revised SLOs/SLAs between Hertz and Uber/Lyft. Those efforts eventually became a top priority and were focused on delivering business insights, helping with campaigns, and finding problems within Hertz services.",
         "responsibilities": [
+            {
+                "skill": "Tech lead",
+                "url": "blog link",
+                "description": "describe responsibilities"
+            },
             {
                 "skill": "SRE",
                 "url": "blog link",
@@ -127,14 +131,9 @@ var projects = {
                 "skill": "Monitoring",
                 "url": "",
                 "description": "describe responsibilities"
-            },
-            {
-                "skill": "Tech lead",
-                "url": "blog link",
-                "description": "describe responsibilities"
             }
         ],
-        "keywords": ["Kotlin", "Dynatrace", "Cloudwatch", "SLOs"] //TODO more of these
+        "keywords": ["Kotlin", "Dynatrace", "Cloudwatch", "SLOs", "XP", "Metrics", "Monitoring", "Redis", "Throttling", "Webhooks", "AmazonMQ"]
     },
     "caimr": {
         "title": "CA Division of Workers' Compensation",
@@ -161,7 +160,7 @@ var projects = {
                 "description": "describe responsibilities"
             }
         ],
-        "keywords": ["AI + Health", "AWS", "ECS", "Big data", "Redshift"] //TODO NOW more of these
+        "keywords": ["AI + Health", "ECS", "Big data", "DynamoDb", "Node", "CI/CD", "Terraform"]
     },
     "cephalon": {
         "title": "Cephalon Wanna_b",
