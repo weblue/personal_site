@@ -151,7 +151,7 @@ a:visited {
   padding-inline-start: 20px;
 }
 .modal-window > div > ul > li {
-  margin-right: 40px;
+  margin-right: 50px;
 }
 .modal-window > div > ul > li > a:link {
   color: rgb(0, 145, 255);
@@ -211,7 +211,7 @@ body {
 .details {
   font-size: 1rem;
   font-weight: bold;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 #pixel-box {

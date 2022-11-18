@@ -111,7 +111,8 @@ function refresh() {
 }
 
 
-//TODO LATER update content
+//TODO NOW update content
+//TODO how to present responsibilities description
 var projects = {
     "hertz": {
         "title": "Hertz - Uber - Lyft",
@@ -133,33 +134,38 @@ var projects = {
                 "description": "describe responsibilities"
             }
         ],
-        "keywords": ["Kotlin", "Dynatrace", "Cloudwatch", "SLOs"]
+        "keywords": ["Kotlin", "Dynatrace", "Cloudwatch", "SLOs"] //TODO more of these
     },
     "caimr": {
         "title": "CA Division of Workers' Compensation",
         "description": "this is where I'll describe projects for caimr",
         "responsibilities": [
             {
-                "skill": "Spring",
-                "url": "",
-                "description": "describe responsibilities"
-            },
-            {
-                "skill": "AI",
+                "skill": "Tech lead",
                 "url": "blog link",
                 "description": "describe responsibilities"
             },
             {
-                "skill": "Tech lead",
-                "url": "blog link?",
+                "skill": "Spring boot backends",
+                "url": "",
+                "description": "describe responsibilities"
+            },
+            {
+                "skill": "AWS/Terraform deployments",
+                "url": "",
+                "description": "describe responsibilities"
+            },
+            {
+                "skill": "Message queues",
+                "url": "",
                 "description": "describe responsibilities"
             }
         ],
-        "keywords": ["AI + Health", "AWS", "ECS", "Big data"]
+        "keywords": ["AI + Health", "AWS", "ECS", "Big data", "Redshift"] //TODO NOW more of these
     },
     "cephalon": {
         "title": "Cephalon Wanna_b",
-        "description": "describe cephalon wannab",
+        "description": "Cephalon wanna_b is a years old hobby project that has grown to an app used by over 25k unique visitors per month (during peak), and a discord community 10k strong. It was initially an excel sheet, turned Angular.js app, turned Angular 10 app. It's maintained by a community of volunteer devs and content creators.",
         "responsibilities": [],
         "keywords": ["Angular"]
     }
