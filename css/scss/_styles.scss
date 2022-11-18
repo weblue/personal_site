@@ -98,12 +98,12 @@ a:visited {
   z-index: 1000;
   visibility: hidden;
   pointer-events: none;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   color: $background-color;
   & > div {
-    border: 3px solid $background-color;
-    outline: 8px solid $font-color;
-    width: 40%;
+    border: 2px solid $background-color;
+    outline: 6px solid $font-color;
+    width: 50%;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -112,17 +112,40 @@ a:visited {
     transform: translate(-50%, -50%);
     padding: 2em;
     background: $font-color;
-    // TODO MOBILE change flex
-    // TODO MOBILE change box size on mobile
-    // & > div {
 
-    // }
-    // & > ul {
+    @media only screen and (max-width: 480px) {
+      padding: 1em;
+      width: 80%;
+    }
+    
+    & > div {
+      margin: 0 0 10px 0;
+    }
+    & > h2 {
+      margin: 5px 0 25px 0;
+    }
+    & > h4 {
+      margin: 10px 0 0 0;
+    }
+    & > ul {
+      margin: 10px 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      list-style-position: inside;
+      padding-inline-start: 20px;
 
-    // }
+      & > li {
+        margin-right: 40px;
+
+        & > a:link {
+          color: $oppo-link-color;
+        }
+      }
+    }
   }
-
 }
+
 .modal-close {
   color: map-get($pixel-color-map, "c") !important;
   line-height: 50px;

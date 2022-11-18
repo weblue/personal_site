@@ -111,13 +111,13 @@ a:visited {
   z-index: 1000;
   visibility: hidden;
   pointer-events: none;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   color: #000;
 }
 .modal-window > div {
-  border: 3px solid #000;
-  outline: 8px solid #fff;
-  width: 40%;
+  border: 2px solid #000;
+  outline: 6px solid #fff;
+  width: 50%;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -126,6 +126,35 @@ a:visited {
   transform: translate(-50%, -50%);
   padding: 2em;
   background: #fff;
+}
+@media only screen and (max-width: 480px) {
+  .modal-window > div {
+    padding: 1em;
+    width: 80%;
+  }
+}
+.modal-window > div > div {
+  margin: 0 0 10px 0;
+}
+.modal-window > div > h2 {
+  margin: 5px 0 25px 0;
+}
+.modal-window > div > h4 {
+  margin: 10px 0 0 0;
+}
+.modal-window > div > ul {
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  list-style-position: inside;
+  padding-inline-start: 20px;
+}
+.modal-window > div > ul > li {
+  margin-right: 40px;
+}
+.modal-window > div > ul > li > a:link {
+  color: rgb(0, 0, 255);
 }
 
 .modal-close {
