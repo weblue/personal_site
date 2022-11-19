@@ -26,8 +26,8 @@
 }
 @media only screen and (max-width: 480px) {
   .mobile-star-1 {
-    top: 70%;
-    left: 75%;
+    top: 75%;
+    left: 82%;
   }
 }
 
@@ -97,7 +97,8 @@ a:visited {
 }
 @media only screen and (max-width: 480px) {
   .moon {
-    top: 30%;
+    top: 32%;
+    left: 45%;
   }
 }
 
@@ -131,16 +132,27 @@ a:visited {
   .modal-window > div {
     padding: 1em;
     width: 80%;
+    font-size: 1rem;
   }
 }
 .modal-window > div > div {
   margin: 0 0 10px 0;
 }
 .modal-window > div > h2 {
-  margin: 5px 0 25px 0;
+  margin: 10px 0 25px 0;
+}
+@media only screen and (max-width: 480px) {
+  .modal-window > div > h2 {
+    margin-bottom: 10px;
+  }
 }
 .modal-window > div > h4 {
   margin: 10px 0 0 0;
+}
+@media only screen and (max-width: 480px) {
+  .modal-window > div > h4 {
+    margin-top: 0px;
+  }
 }
 .modal-window > div > ul {
   margin: 10px 0 0 0;
@@ -148,10 +160,22 @@ a:visited {
   flex-wrap: wrap;
   list-style-type: none;
   list-style-position: inside;
-  padding-inline-start: 20px;
+  padding-inline-start: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .modal-window > div > ul {
+    margin-top: 0px;
+    padding-inline-start: 5px;
+  }
 }
 .modal-window > div > ul > li {
-  margin-right: 50px;
+  margin: 5px 10px 5px 10px;
+}
+@media only screen and (max-width: 480px) {
+  .modal-window > div > ul > li {
+    margin: 2px 5px 2px 5px;
+    padding-inline-start: 5px;
+  }
 }
 .modal-window > div > ul > li > a:link {
   color: rgb(0, 145, 255);
@@ -183,6 +207,11 @@ body {
   background-color: #fff;
   color: #000;
 }
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
 
 .text {
   text-shadow: 0 0 2px #fff;
@@ -194,7 +223,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -204,7 +233,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .sub-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -212,6 +241,12 @@ body {
   font-size: 1rem;
   font-weight: bold;
   margin-left: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .details {
+    font-size: 0.8rem;
+    margin-left: 8px;
+  }
 }
 
 #pixel-box {

@@ -115,7 +115,7 @@ function refresh() {
 var projects = {
     "hertz": {
         "title": "Hertz - Uber - Lyft",
-        "description": "I as a consultant for Hertz to help integrate Hertz into Uber and Lyft platforms as a partner. This simple task quickly grew in complexity as the API developed for this began receiving 360k requests per hour, at peak. As we reworked this application, I lead the efforts to monitor and measure the throughput, and created, tested, and revised SLOs/SLAs between Hertz and Uber/Lyft. Those efforts eventually became a top priority and were focused on delivering business insights, helping with campaigns, and finding problems within Hertz services.",
+        "description": "As a consultant for Hertz, I helped integrate Hertz into Uber and Lyft platforms, helping create an API that received 360k requests per hour, at peak. After the initial tasks of creating and optimizing the API, I lead the efforts to monitor and measure the throughput, and created, tested, and revised SLOs/SLAs between Hertz and Uber/Lyft. Those efforts eventually became a top priority and were focused on delivering business insights, helping with campaigns, and finding problems within Hertz services.",
         "responsibilities": [
             {
                 "skill": "Tech lead",
