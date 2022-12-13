@@ -137,7 +137,7 @@ var projects = {
     },
     "caimr": {
         "title": "CA Division of Workers' Compensation",
-        "description": "this is where I'll describe projects for caimr",
+        "description": "CAIMR required a system for the management of Workers Compensation appeal documents for review by doctors. For MAXIMUS, I helped maintain the AI, MQ, and Spring based systems that assisted this task. I particularly worked on the endpoints and web servers used by doctors and nurses to access the case review system, a system that used message queues to move documents for processing with OCR and classification using AI, and modernizing deployment, monitoring, and SRE efforts",
         "responsibilities": [
             {
                 "skill": "Tech lead",
@@ -166,6 +166,6 @@ var projects = {
         "title": "Cephalon Wanna_b",
         "description": "Cephalon wanna_b is a years old hobby project that has grown to an app used by over 25k unique visitors per month (during peak), and a discord community 10k strong. It was initially an excel sheet, turned Angular.js app, turned Angular 10 app. It's maintained by a community of volunteer devs and content creators.",
         "responsibilities": [],
-        "keywords": ["Angular"]
+        "keywords": ["Angular", "CI/CD", "Node", "Bulma CSS"]
     }
 }
