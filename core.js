@@ -38,30 +38,30 @@ function showModal(project) {
 
     //Hide elements if their data is empty
     var resps = projects[project].responsibilities;
-    if (resps == undefined) {
-        console.error("missing property 'responsibilities'")
-    }
-    if (resps.length == 0) {
+    if (resps == undefined || resps.length == 0) {
         ulSkills.style.visibility = "hidden"
         h4Skills.style.visibility = "hidden"
     } else {
         ulSkills.style.visibility = ""
         h4Skills.style.visibility = ""
+
+        //Populate list elements, including urls, if they exist
+        resps.forEach(skill => {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.textContent = skill.skill
+
+            var url = skill.url
+            if (url) {
+                a.setAttribute('href', url);
+                a.setAttribute('target', "_blank");
+            }
+
+            li.appendChild(a);
+            ulSkills.appendChild(li);
+        });
     }
-    //Populate list elements, including urls, if they exist
-    resps.forEach(skill => {
-        var li = document.createElement("li");
-        var a = document.createElement("a");
-        a.textContent = skill.skill
 
-        var url = skill.url
-        if (url) {
-            a.setAttribute('href', url);
-        }
-
-        li.appendChild(a);
-        ulSkills.appendChild(li);
-    });
 
     //Get list and title
     var ulKeywords = document.getElementById("keywords")
@@ -72,24 +72,48 @@ function showModal(project) {
 
     //Hide elements if their data is empty
     var keywords = projects[project].keywords;
-    if (keywords == undefined) {
-        console.error("missing property 'keywords'")
-    }
-    if (keywords.length == 0) {
+    if (keywords == undefined || keywords.length == 0) {
         ulKeywords.style.visibility = "hidden"
         h4Keywords.style.visibility = "hidden"
     } else {
         ulKeywords.style.visibility = ""
         h4Keywords.style.visibility = ""
-    }
-    keywords.forEach(keyword => {
-        var li = document.createElement("li");
-        var a = document.createElement("a");
-        a.textContent = keyword
 
-        li.appendChild(a);
-        ulKeywords.appendChild(li);
-    });
+        keywords.forEach(keyword => {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.textContent = keyword
+
+            li.appendChild(a);
+            ulKeywords.appendChild(li);
+        });
+    }
+
+    //Get list and title
+    var ulCerts = document.getElementById("certs")
+    var h4Certs = document.getElementById("certs-title")
+
+    //Clear list
+    ulCerts.innerHTML = ""
+
+    //Hide elements if their data is empty
+    var certs = projects[project].certs;
+    if (certs == undefined || certs.length == 0) {
+        ulCerts.style.visibility = "hidden"
+        h4Certs.style.visibility = "hidden"
+    } else {
+        ulCerts.style.visibility = ""
+        h4Certs.style.visibility = ""
+
+        certs.forEach(cert => {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.textContent = cert
+
+            li.appendChild(a);
+            ulCerts.appendChild(li);
+        });
+    }
 }
 
 function closeModal() {
@@ -111,7 +135,6 @@ function refresh() {
 }
 
 //TODO how to present responsibilities description
-//TODO PRIORITY update blog links
 var projects = {
     "hertz": {
         "title": "Hertz - Uber - Lyft",
@@ -141,7 +164,7 @@ var projects = {
         "responsibilities": [
             {
                 "skill": "Tech lead",
-                "url": "blog link",
+                "url": "",
                 "description": "describe responsibilities"
             },
             {
@@ -167,5 +190,10 @@ var projects = {
         "description": "Cephalon wanna_b is a years old hobby project that has grown to an app used by over 25k unique visitors per month (during peak), and a discord community 10k strong. It was initially an excel sheet, turned Angular.js app, turned Angular 10 app. It's maintained by a community of volunteer devs and content creators.",
         "responsibilities": [],
         "keywords": ["Angular", "CI/CD", "Node", "Bulma CSS"]
+    },
+    "certs": {
+        "title": "My Certifications",
+        "description": "Over the years, I've had significant experience deploying and architecting applications with AWS systems. I look forward to earning certifications with more cloud providers, when the opportunity is presented.",
+        "certs": ["AWS Developer Associate", "AWS Data Analytics Specialty", "AWS Solutions Architect"]
     }
 }
