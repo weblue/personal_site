@@ -142,12 +142,12 @@ var projects = {
         "responsibilities": [
             {
                 "skill": "Tech lead",
-                "url": "http://blog.nader.contact/code/development/career/2023/03/29/Data-based-monitoring-and-business-analytics-at-hertz.html",
+                "url": "https://blog.nader.contact/code/development/career/2023/03/29/Data-based-monitoring-and-business-analytics-at-hertz.html",
                 "description": "Lead my project using Agile-like methods including story boarding and \"pointing\" tasks, keeping team members productive and unblocked, and applied XP practices to keep my team communicating and empathetic."
             },
             {
                 "skill": "Site Reliability Engineering",
-                "url": "http://blog.nader.contact/code/development/career/2023/03/29/Data-based-monitoring-and-business-analytics-at-hertz.html",
+                "url": "https://blog.nader.contact/code/development/career/2023/03/29/Data-based-monitoring-and-business-analytics-at-hertz.html",
                 "description": "Used Dynatrace and AWS to deduce business and reliability analytics. Was able to answer important questions based on API usage and throughput. Read more on my blog!"
             },
             {
