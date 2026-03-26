@@ -454,10 +454,13 @@ $default-settings: (
   display: flex !important;
   flex-wrap: wrap;
   & > li {
-    border-right: 2px solid map-get($pixel-color-map, 'c');
     padding: 0 8px;
     margin: 2px 0 !important;
     &:first-child { padding-left: 0; }
-    &:last-child { border-right: none; }
+    &:not(:last-child)::after {
+      content: "◆";
+      margin-left: 8px;
+      color: map-get($pixel-color-map, 'c');
+    }
   }
 }
