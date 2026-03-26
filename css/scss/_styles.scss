@@ -265,14 +265,14 @@ h3 {
     flex-direction: column;
     align-items: flex-start;
     z-index: 998;
-    padding: 0 5 0 5px;
+    padding: 0 5px 0 5px;
     margin-right: 0;
     justify-content: space-between;
     flex-wrap: wrap;
     justify-self: end;
     @media only screen and (max-width: 480px) {
       flex-direction: column-reverse;
-      flex-wrap: no-wrap;
+      flex-wrap: nowrap;
     }
 }
 
@@ -451,10 +451,13 @@ $default-settings: (
 }
 
 #certs {
-  display: block !important;
+  display: flex !important;
+  flex-wrap: wrap;
   & > li {
-    border-left: 3px solid map-get($pixel-color-map, 'c');
-    padding-left: 8px;
-    margin: 4px 0 !important;
+    border-right: 2px solid map-get($pixel-color-map, 'c');
+    padding: 0 8px;
+    margin: 2px 0 !important;
+    &:first-child { padding-left: 0; }
+    &:last-child { border-right: none; }
   }
 }

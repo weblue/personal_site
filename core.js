@@ -31,6 +31,7 @@ function showModal(project) {
     modal.style.visibility = "visible";
     modal.style.pointerEvents = "auto";
 
+    if (!projects[project]) return;
     document.getElementById("project-name").innerHTML = projects[project].title;
     document.getElementById("description").innerHTML = projects[project].description;
 
