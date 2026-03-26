@@ -449,3 +449,12 @@ $default-settings: (
     map-get($pixel-color-map, 'g') $pixel-size
   );
 }
+
+#certs {
+  display: block !important;
+  & > li {
+    border-left: 3px solid map-get($pixel-color-map, 'c');
+    padding-left: 8px;
+    margin: 4px 0 !important;
+  }
+}

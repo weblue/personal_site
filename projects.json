@@ -5,13 +5,13 @@
         "responsibilities": [
             {
                 "skill": "Tech lead",
-                "url": "https://blog.nader.contact/code/development/career/2023/03/29/Data-based-monitoring-and-business-analytics-at-hertz.html",
+                "url": "",
                 "description": "Lead my project using Agile-like methods including story boarding and \"pointing\" tasks, keeping team members productive and unblocked, and applied XP practices to keep my team communicating and empathetic."
             },
             {
                 "skill": "Site Reliability Engineering",
-                "url": "https://blog.nader.contact/code/development/career/2023/03/29/Data-based-monitoring-and-business-analytics-at-hertz.html",
-                "description": "Used Dynatrace and AWS to deduce business and reliability analytics. Was able to answer important questions based on API usage and throughput. Read more on my blog!"
+                "url": "",
+                "description": "Used Dynatrace and AWS to deduce business and reliability analytics. Was able to answer important questions based on API usage and throughput."
             },
             {
                 "skill": "Monitoring",
@@ -57,6 +57,6 @@
     "certs": {
         "title": "My Certifications",
         "description": "Over the years, I've had significant experience deploying and architecting applications with AWS systems. I look forward to earning certifications with more cloud providers, when the opportunity is presented.",
-        "certs": ["AWS Developer Associate", "AWS Data Analytics Specialty", "AWS Solutions Architect"]
+        "certs": ["AWS Developer Associate", "AWS Data Analytics Specialty", "AWS Solutions Architect", "Claude Certified Architect"]
     }
 }
