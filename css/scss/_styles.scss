@@ -226,7 +226,6 @@ body {
 }
 
 #pixel-box {
-  position: flex;
   height: 100%;
 }
 
@@ -279,6 +278,7 @@ h3 {
 
 @import "../../node_modules/compass-mixins/lib/compass/css3";
 
+$pixel-size: 8px;
 $required-properties: (id, frames, colors);
 $default-settings: (
   pixel-size: 10px,
@@ -441,3 +441,11 @@ $default-settings: (
 ), (
   pixel-size: $pixel-size
 ));
+
+#ground {
+  background: linear-gradient(
+    to bottom,
+    transparent $pixel-size,
+    map-get($pixel-color-map, 'g') $pixel-size
+  );
+}
